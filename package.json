@@ -6,8 +6,11 @@
   "private": true,
   "dependencies": {},
   "devDependencies": {
+    "@angular-devkit/core": "~19.2.0",
+    "@nx/angular": "20.7.1",
     "@nx/js": "20.7.1",
     "@nx/workspace": "20.7.1",
     "nx": "20.7.1"
-  }
+  },
+  "packageManager": "yarn@1.22.19+sha1.4ba7fc5c6e704fce2066ecbfb0b0d8976fe62447"
 }
