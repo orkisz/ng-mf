@@ -1,5 +1,8 @@
-<ul class="remote-menu">
-  <li><a routerLink="/">Home</a></li>
-  <li><a routerLink="login">Login</a></li>
-</ul>
-<router-outlet></router-outlet>
+<div class="dashboard-nav">Admin Dashboard</div>
+@if (isLoggedIn$ | async) {
+  <div>
+    You are authenticated so you can see this content.
+  </div>
+} @else {
+  <router-outlet></router-outlet>
+}
