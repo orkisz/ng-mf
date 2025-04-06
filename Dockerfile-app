@@ -1,4 +1,4 @@
-FROM node:22 AS base
+FROM node:22-alpine AS base
 
 RUN corepack enable
 
@@ -21,7 +21,7 @@ COPY . .
 
 RUN cd apps/$ARG_APP_NAME && yarn nx build
 
-FROM nginx:latest AS runner
+FROM nginx:alpine AS runner
 
 ARG ARG_APP_NAME
 
