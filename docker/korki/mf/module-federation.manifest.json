@@ -1,0 +1,4 @@
+{
+  "login": "http://localhost:8081",
+  "dashboard": "http://localhost:8082"
+}

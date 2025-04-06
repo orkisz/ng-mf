@@ -1,0 +1,36 @@
+name: ng-mf
+
+services:
+  korki:
+    build:
+      context: .
+      dockerfile: Dockerfile-app
+      args:
+        ARG_APP_NAME: korki
+    ports:
+      - '8080:80'
+    volumes:
+      - ./docker/korki/mf:/usr/share/nginx/html/mf
+      - ./docker/nginx/conf.d:/etc/nginx/conf.d
+
+  login:
+    build:
+      context: .
+      dockerfile: Dockerfile-app
+      args:
+        ARG_APP_NAME: login
+    ports:
+      - '8081:80'
+    volumes:
+      - ./docker/nginx/conf.d:/etc/nginx/conf.d
+
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile-app
+      args:
+        ARG_APP_NAME: dashboard
+    ports:
+      - '8082:80'
+    volumes:
+      - ./docker/nginx/conf.d:/etc/nginx/conf.d
