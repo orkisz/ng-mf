@@ -480,6 +480,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@angular/pwa@npm:~19.2.0":
+  version: 19.2.6
+  resolution: "@angular/pwa@npm:19.2.6"
+  dependencies:
+    "@angular-devkit/schematics": "npm:19.2.6"
+    "@schematics/angular": "npm:19.2.6"
+    parse5-html-rewriting-stream: "npm:7.0.0"
+  peerDependencies:
+    "@angular/cli": ^19.2.6
+  peerDependenciesMeta:
+    "@angular/cli":
+      optional: true
+  checksum: 10c0/0768c56aa3e008edf90c5d138ea244caa743dad34eeff380c4babb1a5a63a123a9ef73e52fdb963255548b41bcf9d5eda034df5de195921a52a5d334dae60332
+  languageName: node
+  linkType: hard
+
 "@angular/router@npm:~19.2.0":
   version: 19.2.5
   resolution: "@angular/router@npm:19.2.5"
@@ -491,6 +507,20 @@ __metadata:
     "@angular/platform-browser": 19.2.5
     rxjs: ^6.5.3 || ^7.4.0
   checksum: 10c0/5eecadb52552633603fce5e5415c37275eb44451d2591fb78f9dd85fc5015a1d65014989b89e5fbdf9eacfc39420804b11c9d4774c28f3508bce4fee129c9f26
+  languageName: node
+  linkType: hard
+
+"@angular/service-worker@npm:~19.2.0":
+  version: 19.2.5
+  resolution: "@angular/service-worker@npm:19.2.5"
+  dependencies:
+    tslib: "npm:^2.3.0"
+  peerDependencies:
+    "@angular/core": 19.2.5
+    rxjs: ^6.5.3 || ^7.4.0
+  bin:
+    ngsw-config: ngsw-config.js
+  checksum: 10c0/d60b1884b0eb839fa107d3c622751a458e61338e21e45ba8ac197d4cdbb435c38daf4adb4e87a41c4b3c22b42ba3a64300a28414698d1e498717ce034d69cb1c
   languageName: node
   linkType: hard
 
@@ -4049,7 +4079,9 @@ __metadata:
     "@angular/language-service": "npm:~19.2.0"
     "@angular/platform-browser": "npm:~19.2.0"
     "@angular/platform-browser-dynamic": "npm:~19.2.0"
+    "@angular/pwa": "npm:~19.2.0"
     "@angular/router": "npm:~19.2.0"
+    "@angular/service-worker": "npm:~19.2.0"
     "@eslint/js": "npm:^9.8.0"
     "@module-federation/enhanced": "npm:^0.9.0"
     "@nx/angular": "npm:20.7.1"
