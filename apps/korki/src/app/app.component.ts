@@ -3,6 +3,7 @@ import { Router, RouterModule } from '@angular/router';
 import { UserService } from '@ng-mf/data-access-user';
 import { distinctUntilChanged } from 'rxjs';
 import { CommonModule } from '@angular/common';
+import { SwUpdate } from '@angular/service-worker';
 
 @Component({
   imports: [CommonModule, RouterModule],
@@ -13,6 +14,7 @@ import { CommonModule } from '@angular/common';
 export class AppComponent implements OnInit {
   private router = inject(Router);
   private userService = inject(UserService);
+  private swUpdate = inject(SwUpdate);
   isLoggedIn$ = this.userService.isUserLoggedIn$;
 
   ngOnInit() {
@@ -28,5 +30,9 @@ export class AppComponent implements OnInit {
           }
         });
       });
+
+    this.swUpdate.versionUpdates.subscribe((event) => {
+      console.log(event);
+    });
   }
 }
